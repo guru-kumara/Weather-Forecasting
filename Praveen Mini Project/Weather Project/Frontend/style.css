@@ -1,0 +1,108 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1920') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque for better visibility */
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#city {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ff7e5f;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#city:focus {
+  border-color: #feb47b;
+  box-shadow: 0 0 5px rgba(254, 180, 123, 0.5);
+}
+
+#getWeather {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#getWeather:hover {
+  background-color: #feb47b;
+  transform: scale(1.05);
+}
+
+#weatherDetails {
+  margin-top: 20px;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s;
+}
+
+#weatherDetails h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#weatherDetails p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+#weatherIcon {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s;
+}
+
+#weatherIcon:hover {
+  transform: rotate(15deg) scale(1.1);
+}
